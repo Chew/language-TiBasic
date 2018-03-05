@@ -1,12 +1,12 @@
 {
   "name": "language-tibasic",
-  "version": "0.0.0",
-  "description": "A short description of your language package",
+  "version": "1.0.0",
+  "description": "Support for the Ti-Basic language, supporting auto-complete for (most) of the items in the catalouge.",
   "keywords": [
     "language",
     "grammar"
   ],
-  "repository": "https://github.com/atom/language-tibasic",
+  "repository": "https://github.com/Chewsterchew/language-tibasic",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
