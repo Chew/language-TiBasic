@@ -12,12 +12,17 @@
     'name': 'comment'
   },
   {
-    'match': '\\b(abs|angle|Asm|AsmComp|augment|bal|binomcdf|binompdf|checkTmr|x²cdf|x²pdf|x²-Test)\\b'
+    'match': '\\b(abs|angle|Asm|AsmComp|augment|bal|binomcdf|binompdf|checkTmr|χ²cdf|χ²pdf|χ²-Test|χ²GOF-Test|Circle|conj|cos|cos|cosh|cosh|cumSum|dawOfWk|dbd|det|dim|Disp|DS<|^|Eff|EquString|eval|expr|Fcdf|Fill|fMax|fMin|fnInt|fPart|Fpdf|gcd|geometcdf|geometpdf|Get|GetCalc|getDtStr|getTmStr|GraphColor|GraphStyle|identity|imag|inString|int|ΣInt|invBinom|invNorm|invT|iPart|irr|IS>|lcm|length|Line|ln|log|logBASE|max|mean|median|Menu|min|nDeriv|normalcdf|normalpdf|not|npv|OpenLib|Output|Plot1|Plot2|Plot3|poissoncdf|poissonpdf|prod)\\b'
     'name': 'support.function.tibasic'
   },
   {
     'match': '\\b(If|Then|Else|End|Repeat|While|For|Pause|Lbl|Goto|Wait|Menu|Return|Stop|DelVar)\\b'
     'name': 'keyword.control.tibasic'
+  },
+  {
+    'begin': '"'
+    'end': "\n"
+    'name': 'string.quoted.double.tibasic'
   },
   {
     'begin': '"'
