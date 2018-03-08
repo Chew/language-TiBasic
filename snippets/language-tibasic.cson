@@ -3,6 +3,12 @@
 
 '.source.8xp':
   # A
+  'Absolute Value':
+    'prefix': 'abs'
+    'body': 'abs('
+  'Angle':
+    'prefix': 'angle'
+    'body': 'angle('
   # B
   # C
   # D
@@ -38,3 +44,15 @@
   'Store Variable Key':
     'prefix': 'sto'
     'body': '→'
+  'List Variable Key':
+    'prefix': 'list'
+    'body': '⌊'
+  'Not Equal':
+    'prefix': '=/='
+    'body': '≠'
+  'Square Root Symbol':
+    'prefix': 'sqrt'
+    'body': '√('
+  'Squared':
+    'prefix': '^2'
+    'body': '²'
