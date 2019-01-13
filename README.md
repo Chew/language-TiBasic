@@ -14,6 +14,8 @@ What's this for? [Atom](http://atom.io)
 
 Do you love calculator programming? [Yes](http://ti84.chew.pw)
 
+To learn how to program on a calculator, please see http://tibasicdev.wikidot.com/home :) Enjoy!
+
 ## Disclaimer
 
 This is more of a "How do languages in Atom work?" and I'm really just trying my best here. PRs are welcome.
