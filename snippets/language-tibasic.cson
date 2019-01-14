@@ -28,7 +28,7 @@
   # O
   'Output':
     'prefix': 'Output'
-    'body': 'Output('
+    'body': 'Output($1,$2,$3)'
   # P
   # Q
   # R
@@ -48,11 +48,11 @@
     'prefix': 'list'
     'body': '⌊'
   'Not Equal':
-    'prefix': '=/='
+    'prefix': 'notequal'
     'body': '≠'
   'Square Root Symbol':
     'prefix': 'sqrt'
     'body': '√('
   'Squared':
-    'prefix': '^2'
+    'prefix': 'square'
     'body': '²'
