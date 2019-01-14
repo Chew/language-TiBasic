@@ -1,5 +1,7 @@
 # If this is your first time writing a language grammar, check out:
 #   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+# This was updated by VoxelPrismatic :)
+# DarkTheme: [Color]
 
 'scopeName': 'source.8xp'
 'name': 'Ti-Basic'
@@ -8,25 +10,52 @@
 ]
 'patterns': [
   {
-    'match': '^\\s*".*$'
-    'name': 'comment'
+     #OneDark Theme: Yellow/Green
+     #This is for strings, and works in TI-BASIC
+    'match': '(")([^"]*(")|.*\\n|.*$)'
+    'captures':
+      '1':
+        'name': 'punctuation.definition.string.begin.tibasic'
+      '2':
+        'name': 'string.quoted.double.tibasic'
+      '3':
+        'name': 'punctuation.definition.string.begin.tibasic'
+    'name': 'meta.string.quoted.double.tibasic'
   },
   {
-    'match': '\\b(abs|angle|Asm|AsmComp|augment|bal|binomcdf|binompdf|checkTmr|χ²cdf|χ²pdf|χ²-Test|χ²GOF-Test|Circle|conj|cos|cos|cosh|cosh|cumSum|dawOfWk|dbd|det|dim|Disp|DS<|^|Eff|EquString|eval|expr|Fcdf|Fill|fMax|fMin|fnInt|fPart|Fpdf|gcd|geometcdf|geometpdf|Get|GetCalc|getDtStr|getTmStr|GraphColor|GraphStyle|identity|imag|inString|int|ΣInt|invBinom|invNorm|invT|iPart|irr|IS>|lcm|length|Line|ln|log|logBASE|max|mean|median|Menu|min|nDeriv|normalcdf|normalpdf|not|npv|OpenLib|Output|Plot1|Plot2|Plot3|poissoncdf|poissonpdf|prod)\\b'
+    #Generic functions
+    #OneDark Theme: Cyan
+    'match': '\\b(Asm|AsmComp|Asm84CPrgm|Asm84CEPrgm|augment|AsmPrgm|checkTmr|χ²cdf|χ²pdf|χ²-Test|χ²GOF-Test|Circle|1-PropZInt|2-PropZInt|1-PropZTest|2-PropZTest|2-SampFTest|2-SampTInt|2-SampTTest|2-SampZInt|2-SampZTest|1-Var Stats|2-Var StatsGet|GetCalc|getKey|Disp|Output|Prompt|Input)\\b'
     'name': 'support.function.tibasic'
   },
   {
-    'match': '\\b(If|Then|Else|End|Repeat|While|For|Pause|Lbl|Goto|Wait|Menu|Return|Stop|DelVar)\\b'
+    #Logic, System, Scripting
+    #OneDark Theme: Magenta
+    'match': '\\b(If|Then|Else|End|Repeat|While|For|Pause|Lbl|Goto|Wait|Menu|Return|Stop|DelVar|Archive|xor|and|Ans|AUTO Answer|CLASSIC|Clear Entries|ClockOff|ClockOn|ClrHome|dayOfWk|dbd|Degree|DependAsk|DependAuto|det|DiagnosticOff|DiagnosticOn|not|Wait|Web|Fix|Float|GarbageCollect|getDate|getDtFmt|getDtStr|getTime|getTmFmt|getTmStr|UnArchive|setDate|setDtFmt|setTime|setTmFmt|or|Return|IndpntAsk|IndpntAuto|IsClockOn|MATHPRINT|prgm|DispTable|Full|Radian|Rcl|startTmr|statwizard-off|statwizard-on)\\b'
     'name': 'keyword.control.tibasic'
   },
   {
-    'begin': '"'
-    'end': "\n"
-    'name': 'string.quoted.double.tibasic'
+    #OneDark Theme:
+    #This is for Variable (Lists, Matricies, more) functions
+   'match': '\\b(ClrAllLists|ClrList|ClrTable|rowSwap|rref|StoreGDB|StorePic|SortA|SortD|SetUpEditor|inString|RecallGDB|RecallPic)\\b'
+   'name': 'variable.other.tibasic'
   },
   {
-    'begin': '"'
-    'end': '"'
-    'name': 'string.quoted.double.tibasic'
+    #Math functions
+    #OneDark Theme: Orange
+    'match': '\\b(abs|angle|ANOVA|conj|bal|binomcdf|binompdf|cos|cosֿ¹|cosh|coshֿ¹|int|invNorm|invT|iPart|irr|lcm|length|nCr|nPr|QuadReg|QuartReg|CubicReg|rand|randBin|randInt|randIntNoRep|randM|randNorm|cumSum|variance|a+bi|tan|tanֿ¹|tanh|tanhֿ¹|fPart|gcd|dim|LinReg|LinRegTInt|LinRegTTest|max|mean|median|min|Un/d|sin|sinֿ¹|sinh|sinhֿ¹|SinReg|sub|sum|stdDev|ln|LnReg|log|logBASE|identity|imag|Manual-Fit|n/d|nDeriv|round|prod|PwrReg|remainder)\\b'
+    'name': 'constant.numeric.tibasic'
+  },
+  {
+    #OneDark Theme: Blue
+    #These are Graph/Drawing commands
+    'match': '\\b(ZBox|ZDecimal|ZFrac1/2|ZFrac1/3|ZFrac1/4|ZFrac1/5|ZFrac1/8|ZFrac1/10|ZInteger|ZInterval|Zoom In|Zoom Out|ZoomFit|ZoomRcl|ZoomStat|ZoomSto|ZPrevious|ZQuadrant1|ZSquare|ZStandard|Z-Test|ZTrig|xyLine|AxesOff|AxesOn|BackgroundOff|BackgroundOn|Boxplot|ClrDraw|Connected|CoordOff|CoordOn|DispGraph|Dot|Dot-Thick|Dot-Thin|DrawF|DrawInv|piecewise|Plot1|Plot2|Plot3|PlotsOff|PlotsOn|GraphColor|GraphStyle|GridOff|GridOn|G-T|ExpReg|ExprOff|ExprOn|DetectAsymOff|DetectAsymOn|FnOff|FnOn|Vertical|vwAxes|uvAxes|uwAxes|LabelOff|LabelOn|Pxl-Change|Pxl-Off|Pxl-On|pxl-Test|Pt-Change|Pt-Off|Pt-On|Text|TextColor|Thick|Thin|Shade|Shadeχ²|ShadeF|ShadeNorm|Shade_t|Simul|Sequential|Horizontal|Histogram|Line)\\b'
+    'name': 'entity.name.function.tibasic'
+  },
+  {
+    #OneDark Theme: Bold Orange
+    #This is for operators and things
+    'match': '\\b(\\∟|\\⌊|\\+|-|\\*|/|\\^|\\×\\√|\\=|\\≠|\\>|\\≥|\\<|\\≤|\\→|!|\\π|\\%|\\r|\\°|\\ֿ¹|\\²|\\³|\\√|\\³\\√)\\b'
+    'name': 'markup.bold.tibasic'
   }
 ]
