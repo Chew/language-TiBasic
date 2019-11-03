@@ -1,7 +1,9 @@
 # If this is your first time writing a language grammar, check out:
 #   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
-# This was updated by VoxelPrismatic :)
-# DarkTheme: [Color]
+# This was updated by VoxelPrismatic
+# Contains all commands up to TI84+CE OS 5.2 (for TI83 Basic)
+# May get updated later for the TI68k and TI-NSpire Basic stuff
+# Version 3 of this file
 
 'scopeName': 'source.8xp'
 'name': 'Ti-Basic'
@@ -31,25 +33,25 @@
   {
     #Logic, System, Scripting
     #OneDark Theme: Magenta
-    'match': '\\b(If|Then|Else|End|Repeat|While|For|Pause|Lbl|Goto|Wait|Menu|Return|Stop|DelVar|Archive|xor|and|Ans|AUTO Answer|CLASSIC|Clear Entries|ClockOff|ClockOn|ClrHome|dayOfWk|dbd|Degree|DependAsk|DependAuto|det|DiagnosticOff|DiagnosticOn|not|Wait|Web|Fix|Float|GarbageCollect|getDate|getDtFmt|getDtStr|getTime|getTmFmt|getTmStr|UnArchive|setDate|setDtFmt|setTime|setTmFmt|or|Return|IndpntAsk|IndpntAuto|IsClockOn|MATHPRINT|prgm|DispTable|Full|Radian|Rcl|startTmr|statwizard-off|statwizard-on)\\b'
+    'match': '\\b(If|Then|Else|End|Repeat|While|For|Pause|Lbl|Goto|Wait|Menu|Return|Stop|DelVar|Archive|xor|and|Ans|AUTO Answer|CLASSIC|Clear Entries|ClockOff|ClockOn|ClrHome|dayOfWk|dbd|Degree|DependAsk|DependAuto|det|DiagnosticOff|DiagnosticOn|not|Wait|Web|Fix|Float|GarbageCollect|getDate|getDtFmt|getDtStr|getTime|getTmFmt|getTmStr|UnArchive|setDate|setDtFmt|setTime|setTmFmt|or|Return|IndpntAsk|IndpntAuto|IsClockOn|MATHPRINT|prgm|DispTable|Full|Radian|Rcl|startTmr|statwizard-off|statwizard-on|Real|Eng|ExecLib|OpenLib|Horiz|Normal|re\\^θi|Sci|Sen|timeCnvd)\\b'
     'name': 'keyword.control.tibasic'
   },
   {
-    #OneDark Theme:
+    #OneDark Theme: Red
     #This is for Variable (Lists, Matricies, more) functions
-   'match': '\\b(ClrAllLists|ClrList|ClrTable|rowSwap|rref|StoreGDB|StorePic|SortA|SortD|SetUpEditor|inString|RecallGDB|RecallPic)\\b'
+   'match': '\\b(ClrAllLists|ClrList|ClrTable|rowSwap|rref|StoreGDB|StorePic|SortA|SortD|SetUpEditor|inString|RecallGDB|RecallPic|Str1|Str2|Str3|Str4|Str5|Str6|Str7|Str8|Str9|Str0|Str|Pic1|Pic2|Pic3|Pic4|Pic5|Pic6|Pic7|Pic8|Pic9|Pic0|Pic|Image1|Image2|Image3|Image4|Image5|Image6|Image7|Image8|Image9|Image0|Image|GBD1|GBD2|GBD3|GBD4|GBD5|GBD6|GBD7|GBD8|GBD9|GBD0|GBD|toString|eval|expr|fill|ref|seq)\\b'
    'name': 'variable.other.tibasic'
   },
   {
     #Math functions
     #OneDark Theme: Orange
-    'match': '\\b(abs|angle|ANOVA|conj|bal|binomcdf|binompdf|cos|cosֿ¹|cosh|coshֿ¹|int|invNorm|invT|iPart|irr|lcm|length|nCr|nPr|QuadReg|QuartReg|CubicReg|rand|randBin|randInt|randIntNoRep|randM|randNorm|cumSum|variance|a+bi|tan|tanֿ¹|tanh|tanhֿ¹|fPart|gcd|dim|LinReg|LinRegTInt|LinRegTTest|max|mean|median|min|Un/d|sin|sinֿ¹|sinh|sinhֿ¹|SinReg|sub|sum|stdDev|ln|LnReg|log|logBASE|identity|imag|Manual-Fit|n/d|nDeriv|round|prod|PwrReg|remainder)\\b'
+    'match': '\\b(abs|angle|ANOVA|conj|bal|binomcdf|binompdf|cos|cosֿ¹|cosh|coshֿ¹|int|invNorm|invT|iPart|irr|lcm|length|nCr|nPr|QuadReg|QuartReg|CubicReg|rand|randBin|randInt|randIntNoRep|randM|randNorm|cumSum|variance|a+bi|tan|tanֿ¹|tanh|tanhֿ¹|fPart|gcd|dim|LinReg|LinRegTInt|LinRegTTest|max|mean|median|min|Un/d|sin|sinֿ¹|sinh|sinhֿ¹|SinReg|sub|sum|stdDev|ln|LnReg|log|logBASE|identity|imag|Manual-Fit|n/d|nDeriv|round|prod|PwrReg|remainder|DS|real|NormProbPlot|ModBoxplot|IS|Fcdf|fMax|fMin|fnInt|Fpdf|geometcdf|geometpdf|Logistic|normalpdf|normalcdf|poissoncdf|poissonpdf|med-med|npv|Pmt_Bgn|Pmt_End|Polar|solve|tcdf|tpdf|TInterval|T-Test|tvm_FV|tvm_I|tvm_N|tvm_Pmt|tvm_PV)\\b'
     'name': 'constant.numeric.tibasic'
   },
   {
     #OneDark Theme: Blue
     #These are Graph/Drawing commands
-    'match': '\\b(ZBox|ZDecimal|ZFrac1/2|ZFrac1/3|ZFrac1/4|ZFrac1/5|ZFrac1/8|ZFrac1/10|ZInteger|ZInterval|Zoom In|Zoom Out|ZoomFit|ZoomRcl|ZoomStat|ZoomSto|ZPrevious|ZQuadrant1|ZSquare|ZStandard|Z-Test|ZTrig|xyLine|AxesOff|AxesOn|BackgroundOff|BackgroundOn|Boxplot|ClrDraw|Connected|CoordOff|CoordOn|DispGraph|Dot|Dot-Thick|Dot-Thin|DrawF|DrawInv|piecewise|Plot1|Plot2|Plot3|PlotsOff|PlotsOn|GraphColor|GraphStyle|GridOff|GridOn|G-T|ExpReg|ExprOff|ExprOn|DetectAsymOff|DetectAsymOn|FnOff|FnOn|Vertical|vwAxes|uvAxes|uwAxes|LabelOff|LabelOn|Pxl-Change|Pxl-Off|Pxl-On|pxl-Test|Pt-Change|Pt-Off|Pt-On|Text|TextColor|Thick|Thin|Shade|Shadeχ²|ShadeF|ShadeNorm|Shade_t|Simul|Sequential|Horizontal|Histogram|Line)\\b'
+    'match': '\\b(ZBox|ZDecimal|ZFrac1/2|ZFrac1/3|ZFrac1/4|ZFrac1/5|ZFrac1/8|ZFrac1/10|ZInteger|ZInterval|Zoom In|Zoom Out|ZoomFit|ZoomRcl|ZoomStat|ZoomSto|ZPrevious|ZQuadrant1|ZSquare|ZStandard|Z-Test|ZTrig|xyLine|AxesOff|AxesOn|BackgroundOff|BackgroundOn|Boxplot|ClrDraw|Connected|CoordOff|CoordOn|DispGraph|Dot|Dot-Thick|Dot-Thin|DrawF|DrawInv|piecewise|Plot1|Plot2|Plot3|PlotsOff|PlotsOn|GraphColor|GraphStyle|GridOff|GridOn|G-T|ExpReg|ExprOff|ExprOn|DetectAsymOff|DetectAsymOn|FnOff|FnOn|Vertical|vwAxes|uvAxes|uwAxes|LabelOff|LabelOn|Pxl-Change|Pxl-Off|Pxl-On|pxl-Test|Pt-Change|Pt-Off|Pt-On|Text|TextColor|Thick|Thin|Shade|Shadeχ²|ShadeF|ShadeNorm|Shade_t|Simul|Sequential|Horizontal|Histogram|Line|Tangent|Trace|Scatter|RectGC|Func|Param|PolarGC|Select|Seq|Time)\\b'
     'name': 'entity.name.function.tibasic'
   },
   {
