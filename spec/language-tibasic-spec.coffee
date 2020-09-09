@@ -9,8 +9,8 @@ describe "TiBasic grammar", ->
       atom.packages.activatePackage("language-tibasic")
 
     runs ->
-      grammar = atom.syntax.grammarForScopeName("source.8xp")
+      grammar = atom.syntax.grammarForScopeName("source.tibasic")
 
   it "parses the grammar", ->
     expect(grammar).toBeTruthy()
-    expect(grammar.scopeName).toBe "source.8xp"
+    expect(grammar.scopeName).toBe "source.tibasic"

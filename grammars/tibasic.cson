@@ -5,10 +5,10 @@
 # May get updated later for the TI68k and TI-NSpire Basic stuff
 # Version 3 of this file
 
-'scopeName': 'source.8xp'
-'name': 'Ti-Basic'
+'name': 'TI-Basic'
+'scopeName': 'source.tibasic'
 'fileTypes': [
-  'extension'
+  '8xp'
 ]
 'patterns': [
   {
