@@ -1,6 +1,6 @@
 {
   "name": "language-tibasic",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Support for the TI-Basic language, supporting (most) of the items in the catalogue.",
   "keywords": [
     "language",
