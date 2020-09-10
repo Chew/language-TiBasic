@@ -8,7 +8,7 @@
 'name': 'TI-Basic'
 'scopeName': 'source.tibasic'
 'fileTypes': [
-  '8xp'
+  'tib'
 ]
 'patterns': [
   {
